@@ -42,5 +42,5 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.220302, 0.0720631, -0
 [node name="Propeller4" parent="dronebody" instance=ExtResource("1_uvgqj")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.220302, 0.0720631, 0.305531)
 
-[node name="Camera3D" type="Camera3D" parent="dronebody"]
-transform = Transform3D(0.0112571, 0, 0.999937, 0, 1, 0, -0.999937, 0, 0.0112571, 1.43594, 0.558461, 0)
+[node name="camtarget" type="Node3D" parent="dronebody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11396, 1.2679, 0)
