@@ -26,6 +26,9 @@ size = Vector2(100, 100)
 
 [node name="drone_scene" type="Node3D"]
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.0317776, -0.381409, 0.92386, -0.0131114, 0.924406, 0.381184, -0.999409, 0, -0.0343762, 1.90353, 2.10388, -0.0589418)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nb8mf")
 
@@ -43,6 +46,3 @@ shape = SubResource("WorldBoundaryShape3D_jgr37")
 
 [node name="Drone" parent="." instance=ExtResource("1_qhlfa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0200806, 0.195428, 0.0359266)
-
-[node name="Camera3D" type="Camera3D" parent="Drone"]
-transform = Transform3D(-0.0317776, -0.381409, 0.92386, -0.0131114, 0.924406, 0.381184, -0.999409, 0, -0.0343762, 1.88345, 1.90845, -0.0948684)

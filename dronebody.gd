@@ -19,9 +19,10 @@ func _process(delta: float):
 	var for_back = Input.get_axis("forward","reverse")
 	
 	var up_down = Input.get_axis("up","down")
-	new_force += (for_back) * global_transform.basis.z
-	new_force += (-up_down) * Vector3.UP
-	new_force += -0.98 * Vector3.UP
+	new_force = lerp(Vector3(0,0,0), new_force,delta)
+	new_force += (for_back) * global_transform.basis.x
+	new_force += (-up_down*12) * Vector3.UP
+	new_force += -9.8 * Vector3.UP
 	
 		
 func _physics_process(delta: float) -> void:
