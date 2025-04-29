@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1mt883kcp3i"]
+[gd_scene load_steps=11 format=3 uid="uid://b1mt883kcp3i"]
 
 [ext_resource type="PackedScene" uid="uid://dolo3boq5y3kb" path="res://drone.tscn" id="1_qhlfa"]
 [ext_resource type="Script" uid="uid://t3ymdmvmw2cy" path="res://camera_3d.gd" id="2_jgr37"]
+[ext_resource type="Script" uid="uid://bqcmim5yoebge" path="res://spawner.gd" id="3_qrxkg"]
+[ext_resource type="Script" uid="uid://cqrljdeppj35e" path="res://spawner_big.gd" id="4_nb8mf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jgr37"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -52,3 +54,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36355, 1.13258, 0)
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.0317776, -0.381409, 0.92386, -0.0131114, 0.924406, 0.381184, -0.999409, 0, -0.0343762, 1.90353, 2.10388, -0.0589418)
 script = ExtResource("2_jgr37")
+
+[node name="spawner" type="Node3D" parent="."]
+script = ExtResource("3_qrxkg")
+
+[node name="spawner_big" type="Node3D" parent="."]
+script = ExtResource("4_nb8mf")
