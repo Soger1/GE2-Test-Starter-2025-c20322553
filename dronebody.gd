@@ -21,7 +21,7 @@ func _process(delta: float):
 	var up_down = Input.get_axis("up","down")
 	new_force = lerp(Vector3(0,0,0), new_force,delta)
 	new_force += (for_back) * global_transform.basis.x
-	new_force += (-up_down*12) * Vector3.UP
+	new_force += (-up_down*13) * Vector3.UP
 	new_force += -9.8 * Vector3.UP
 	
 		
@@ -32,8 +32,5 @@ func _physics_process(delta: float) -> void:
 	vel -= vel * delta * damping
 	set_velocity(vel)
 	move_and_slide()
-	
-	
-	
 	pass
 	
