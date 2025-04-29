@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dolo3boq5y3kb"]
+
+[ext_resource type="Script" uid="uid://bnvtbjtn245wr" path="res://dronebody.gd" id="1_d5du7"]
+[ext_resource type="PackedScene" uid="uid://c5flp7rv2j82j" path="res://propeller.tscn" id="1_uvgqj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d5du7"]
+size = Vector3(0.598816, 0.168915, 0.621521)
+
+[sub_resource type="BoxMesh" id="BoxMesh_puw62"]
+
+[node name="Drone" type="Node3D"]
+
+[node name="dronebody" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0794912, 0)
+script = ExtResource("1_d5du7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dronebody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00759888, 0.0222231, -0.00228882)
+shape = SubResource("BoxShape3D_d5du7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="dronebody"]
+transform = Transform3D(0.577964, 0, 0, 0, 0.171245, 0, 0, 0, 0.207715, 0, 0, 0)
+mesh = SubResource("BoxMesh_puw62")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="dronebody"]
+transform = Transform3D(0.123417, 0, 0, 0, 0.109055, 0, 0, 0, 0.626052, 0.217249, 0, 0)
+mesh = SubResource("BoxMesh_puw62")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="dronebody"]
+transform = Transform3D(0.123417, 0, 0, 0, 0.109055, 0, 0, 0, 0.626052, -0.208221, 0, 0)
+mesh = SubResource("BoxMesh_puw62")
+
+[node name="Propeller" parent="dronebody" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.201082, 0.0720631, 0.313628)
+
+[node name="Propeller2" parent="dronebody" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.201082, 0.0720631, -0.330322)
+
+[node name="Propeller3" parent="dronebody" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.220302, 0.0720631, -0.330322)
+
+[node name="Propeller4" parent="dronebody" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.220302, 0.0720631, 0.305531)
+
+[node name="Camera3D" type="Camera3D" parent="dronebody"]
+transform = Transform3D(0.0112571, 0, 0.999937, 0, 1, 0, -0.999937, 0, 0.0112571, 1.43594, 0.558461, 0)
